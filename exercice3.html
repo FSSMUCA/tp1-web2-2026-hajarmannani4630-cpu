@@ -10,24 +10,13 @@
     <p>Ouvre la console pour voir les résultats (F12 → Console).</p>
 
     <script>
-        // 1. Déclaration de la constante (en SCREAMING_SNAKE_CASE)
-        const TAUX_TVA = 0.20;  // 20%
-
-        // 2. Variable pour le prix hors taxes
-        let prixHT = 150;  // Tu peux changer cette valeur
-
-        // 3. Calcul du prix TTC
+        const TAUX_TVA = 0.20;  
+        let prixHT = 150;  
         let prixTTC = prixHT + (TAUX_TVA * prixHT);
-        
-        // Calcul du montant de la TVA pour l'affichage
         let montantTVA = TAUX_TVA * prixHT;
-
-        // 4. Affichage avec template literals (backticks)
+        
         console.log(`Prix HT : ${prixHT} € | TVA (20%) : ${montantTVA} € | Prix TTC : ${prixTTC} €`);
 
-        // 5. Tentative de modification de la constante
-        // TAUX_TVA = 0.10;  // ❌ Cela provoque une erreur : Assignment to constant variable.
-        // Pour le voir, décommente la ligne ci-dessus et observe la console.
     </script>
 </body>
 </html>
