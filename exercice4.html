@@ -10,25 +10,15 @@
     <p>Ce script interagit avec toi via des boîtes de dialogue.</p>
 
     <script>
-        // 1. Demander le prénom
         let prenom = prompt("Quel est votre prénom ?");
-
-        // 2. Demander l'âge
         let age = prompt("Quel est votre âge ?");
-
-        // 3. Convertir l'âge en nombre
         let ageNumber = Number(age);
-
-        // 4. Calculer l'année de naissance approximative
         let anneeNaissance = 2025 - ageNumber;
 
-        // 5. Afficher une alerte
         alert(`Bonjour ${prenom} ! Vous êtes né(e) vers ${anneeNaissance}.`);
 
-        // 6. Demander confirmation pour affichage console
         let afficherConsole = confirm("Afficher vos informations dans la console ?");
 
-        // 7. Si OK, afficher les infos dans la console
         if (afficherConsole) {
             console.log("Prénom :", prenom);
             console.log("Âge :", ageNumber);
