@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 6 - Nommage et débogage</title>
+</head>
+<body>
+    <h1>Exercice 6</h1>
+    <p>Ouvre la console pour voir les résultats (F12 → Console).</p>
+
+    <script>
+        // Code corrigé - Variables renommées en camelCase
+        let premierPrix = 100;
+        let deuxiemePrix = 80;
+        let prixMinimum = 50;
+        let variableTemp = 200;  // "var" est un mot réservé, on le renomme
+        let prixMaximum = 300;
+
+        // Calcul du prix moyen (les noms de variables ont été mis à jour)
+        let prixMoyen = (premierPrix + deuxiemePrix + prixMinimum + variableTemp + prixMaximum) / 5;
+
+        // Affichage des résultats
+        console.log("Prix moyen : " + prixMoyen);
+        console.log("Le prix minimum est : " + prixMinimum);
+        console.log("Le prix maximum est : " + prixMaximum);
+    </script>
+</body>
+</html>

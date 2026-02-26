@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 7 - Calculateur de cercle</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        div { margin: 10px 0; padding: 8px; background-color: #f0f0f0; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>Calculatrice de cercle</h1>
+    <div id="rayon"></div>
+    <div id="perimetre"></div>
+    <div id="surface"></div>
+
+    <script>
+        // 1. Constante PI
+        const PI = Math.PI;
+
+        // 2. Demander le rayon et le convertir en nombre
+        let rayonSaisi = prompt("Entrez le rayon du cercle (en cm) :");
+        let rayon = Number(rayonSaisi);
+
+        // Vérification que c'est bien un nombre valide
+        if (isNaN(rayon) || rayon <= 0) {
+            // En cas d'erreur, on affiche un message et on arrête
+            document.getElementById("rayon").innerHTML = "❌ Valeur invalide. Veuillez recharger la page.";
+        } else {
+            // 3. Calculs du périmètre et de la surface
+            let perimetre = 2 * PI * rayon;
+            let surface = PI * rayon * rayon;
+
+            // 4. Affichage dans les divs avec arrondi à 2 décimales
+            document.getElementById("rayon").innerHTML = `📏 Rayon : ${rayon} cm`;
+            document.getElementById("perimetre").innerHTML = `🔄 Périmètre : ${perimetre.toFixed(2)} cm`;
+            document.getElementById("surface").innerHTML = `🔲 Surface : ${surface.toFixed(2)} cm²`;
+        }
+    </script>
+</body>
+</html>
